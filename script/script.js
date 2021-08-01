@@ -8,7 +8,7 @@ const App = {
   data() {
     return {
       spots: [],
-      cacheArea: '',
+      selectedSpot: '',
       cachedSearch: '',
       browseLog: [],
     };
@@ -19,6 +19,10 @@ const App = {
       axios.get(url).then((response) => {
         this.spots = response.data.result.records;
       });
+    },
+
+    onSpotSelected(spot) {
+      this.selectedSpot = spot;
     }
   },
 
