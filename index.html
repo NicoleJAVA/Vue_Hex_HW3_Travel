@@ -1,0 +1,65 @@
+<!DOCTYPE html><html><head><title>章節挑戰</title><meta name="viewport" content="width=device-width, initial-scale=1"><link href="images/favicon.ico" rel="shortcut icon"><meta charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.2/vue.global.js"></script></head><body class="bg-lighter">
+  <div class="container main my-5"><div class="row"><main class="col post">
+  <!-- 章節標題 --><div class="mb-4"><h1 class="mt-0 text-muted">章節挑戰</h1><small>檔名：<code>options-final.html</code></small></div>
+  <!-- 🔥🔥練習開始🔥🔥 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <div id="app" class="mt-2">
+    <div class="row h-100">
+      <div class="col-md-3 h-100 d-flex flex-column">
+        <div class="form-floating mb-2">
+          <input type="text" class="form-control" id="search" placeholder="search">
+          <label for="search">search</label>
+        </div>
+        <div class="list-group option">
+          <label class="list-group-item" >
+            <input class="form-check-input me-1" type="radio" name="area">
+            {{ datastore.Name }}
+          </label>
+        </div>
+      </div>
+      <div class="col-md-8 h-100 d-flex flex-column">
+        <div class="form-floating">
+          <select  id="cacheArea" class="form-select w-50 mb-2" aria-label="select example">
+            <option selected value="" disabled>瀏覽紀錄</option>
+          </select>
+          <label for="cacheArea">瀏覽紀錄</label>
+        </div>
+        <div class="card overflow-auto">
+          <img :src="datastore.Picture1" class="card-img-top" :alt="datastore.Name">
+          <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                  :src=`https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${datastore.Py},${datastore.Px}(${datastore.Name})&z=16&output=embed`></iframe>
+          <div class="card-body">
+            <h5 class="card-title">{{ datastore.Name }}</h5>
+            <p>{{ datastore.Description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script/script.js"></script>
+  
+  <style>
+  #app {
+    height: 600px;
+  }
+  
+  .option {
+    overflow-y: auto;
+  }
+  </style>
+  
+  <!-- 🙇🙇練習結束🙇🙇 -->
+  </main>
+    
+
+      
+    </div>
+  </div>
+
+
+  <link rel="stylesheet" href="stylesheets/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  </body>
+  </html>
+  
