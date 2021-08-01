@@ -21,8 +21,9 @@
       </div>
       <div class="col-md-8 h-100 d-flex flex-column">
         <div class="form-floating">
-          <select  id="cacheArea" class="form-select w-50 mb-2" aria-label="select example">
+          <select v-model="selectedSpot" id="cacheArea" class="form-select w-50 mb-2" aria-label="select example">
             <option selected value="" disabled>瀏覽紀錄</option>
+            <option v-for="(spot, key) in browseLog" :value="spot">{{ key + 1 }}. {{ spot.Name }}</option>
           </select>
           <label for="cacheArea">瀏覽紀錄</label>
         </div>
