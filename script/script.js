@@ -9,7 +9,7 @@ const App = {
     return {
       spots: [],
       cacheArea: '',
-      cacheSearch: '',
+      cachedSearch: '',
       browseLog: [],
     };
   },
