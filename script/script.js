@@ -39,6 +39,9 @@ const App = {
       return this.spots.filter((spot) => spot.Name.match(this.cachedSearch));
     }
   },
+  // 如果曾經瀏覽過這個景點，就把這個景點從瀏覽紀錄移除。
+  // （所以這個景點會呈現在最新的一筆上，舊的紀錄則會消失）
+  // 保持瀏覽紀錄為 10 筆。
 
   watch: {
     selectedSpot() {
